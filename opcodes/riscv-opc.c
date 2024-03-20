@@ -659,6 +659,10 @@ const struct riscv_opcode riscv_opcodes[] =
 {"amomin.d.aqrl",  64, INSN_CLASS_A, "d,t,0(s)", MATCH_AMOMIN_D|MASK_AQRL, MASK_AMOMIN_D|MASK_AQRL, match_opcode, INSN_DREF|INSN_8_BYTE },
 {"amominu.d.aqrl", 64, INSN_CLASS_A, "d,t,0(s)", MATCH_AMOMINU_D|MASK_AQRL, MASK_AMOMINU_D|MASK_AQRL, match_opcode, INSN_DREF|INSN_8_BYTE },
 
+{"amocas.w", 64, INSN_CLASS_ZACAS, "d,t,0(s)", MATCH_AMOCAS_W|MASK_AQRL, MATCH_AMOCAS_W|MASK_AQRL, match_opcode, INSN_DREF|INSN_4_BYTE },
+{"amocas.d", 64, INSN_CLASS_ZACAS, "d,t,0(s)", MATCH_AMOCAS_D|MASK_AQRL, MATCH_AMOCAS_D|MASK_AQRL, match_opcode, INSN_DREF|INSN_8_BYTE },
+{"amocas.q", 64, INSN_CLASS_ZACAS, "d,t,0(s)", MATCH_AMOCAS_Q|MASK_AQRL, MATCH_AMOCAS_Q|MASK_AQRL, match_opcode, INSN_DREF|INSN_16_BYTE },
+
 /* Multiply/Divide instruction subset.  */
 {"mul",        0, INSN_CLASS_ZCB_AND_ZMMUL, "Cs,Cw,Ct",  MATCH_C_MUL, MASK_C_MUL, match_opcode, INSN_ALIAS },
 {"mul",        0, INSN_CLASS_ZMMUL, "d,s,t",     MATCH_MUL, MASK_MUL, match_opcode, 0 },
